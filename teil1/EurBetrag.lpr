@@ -1,5 +1,5 @@
 program EurBetrag (input, output);
- {Euro Betrag ausgeben}
+ {Euro Betrag ausgeben mit Prüfung und Fehlermeldung}
  const
    WAEHRUNG = 'EUR';
 
@@ -11,7 +11,12 @@ program EurBetrag (input, output);
    write ('angeben: ');
    readln (Betrag);
    if Betrag >= 0.0 then
-   writeln (Betrag:9:2, WAEHRUNG)
+      writeln (Betrag:9:2, WAEHRUNG)
+   else
+     begin
+       write ('Eingabefehler! Betrag ', Betrag);
+       writeln ('ist negativ');
+     end
    end. { EURBetrag2 }
 
 
