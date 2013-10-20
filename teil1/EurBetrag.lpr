@@ -1,5 +1,5 @@
 program EurBetrag (input, output);
- {Euro Betrag ausgeben mit Prüfung und Fehlermeldung}
+ {Euro Betrag ausgeben}
  const
    WAEHRUNG = 'EUR';
 
