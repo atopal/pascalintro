@@ -20,9 +20,12 @@ begin
   readln (c);
   writeln ('Die Eingabe war: a=', a, ', b=', b, ', c=',c );
   { bestimme und drucke die Charackteristika des Dreiecks }
-  if (a+b <= c) or (a<=0) or (b>=0) or (c<=0) then
-    writeln ('Das kann kein Dreieck sein')
+  if (b<a) or (c<b) then
+    writeln ('Werte nicht in aufeigender Reihenfolge')
   else
+    if (a+b <= c) then
+      writeln ('Das kann kein Dreieck sein')
+    else
     begin
       if a = c then
         writeln ('ein gleichseitiges Dreieck')
